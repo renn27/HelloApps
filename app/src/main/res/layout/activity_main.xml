@@ -6,13 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/iv_profile"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/img_anime"
+        tools:ignore="MissingConstraints"
+        android:contentDescription="@string/profile_description" />
+
     <TextView
-        android:id="@+id/tName"
+        android:id="@+id/tv_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="M.Rendi Alamsyah"
+        android:text="@string/text_name"
         android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,30 +34,16 @@
         app:layout_constraintVertical_bias="0.564" />
 
     <TextView
-        android:id="@+id/tMajor"
+        android:id="@+id/tv_major"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Universitas Sriwijaya"
+        android:text="@string/text_university"
         android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tName"
+        app:layout_constraintTop_toBottomOf="@id/tv_name"
         tools:ignore="MissingConstraints" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="145dp"
-        android:layout_height="142dp"
-        android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/tName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/img_anime"
-        tools:ignore="MissingConstraints"
-        android:contentDescription="This is picture" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
